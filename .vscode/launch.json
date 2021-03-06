@@ -5,16 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cl.exe - アクティブ ファイルのビルドとデバッグ",
-            "type": "cppvsdbg",
+            // "name": "cl.exe - アクティブ ファイルのビルドとデバッグ",
+            // "type": "cppvsdbg",
+            // "request": "launch",
+            // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "name": "g++ - アクティブ ファイルのビルドとデバッグ",
+            "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "console": "externalTerminal",
+            // "console": "externalTerminal",
             "preLaunchTask": "C/C++: cl.exe アクティブなファイルのビルド"
+            // "MIMode": "gdb",
+            // "setupCommands": [
+            //     {
+            //         "description": "gdb の再フォーマットを有効にする",
+            //         "text": "-enable-pretty-printing",
+            //         "ignoreFailures": true
+            //     }
+            // ],
+            // "preLaunchTask": "C/C++: g++ アクティブなファイルのビルド",
+            // "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
