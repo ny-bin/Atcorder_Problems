@@ -1,4 +1,3 @@
-from collections
 from collections import deque
 
 N, M = list(map(int, input().split()))
