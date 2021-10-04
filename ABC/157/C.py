@@ -1,24 +1,27 @@
 N, M = map(int, input().split())
 
-A = [0] * N
-
-ans = 0
+L = []
 for m in range(M):
-    s, c = map(int, input().split())
-    a = A[s - 1]
-    if a != 0 and a != c:
-        ans = -1
+    sc = list(map(int, input().split()))
+    L.append(sc)
+
+
+ans = -1
+for n in range(10 ** N + 1):
+    numStr = str(n)
+    if len(numStr) != N:
+        continue
+
+    isok = True
+    for m in L:
+        if numStr[m[0] - 1] == str(m[1]):
+            continue
+        else:
+            isok = False
+            break
+
+    if isok:
+        ans = n
         break
-    A[s - 1] = c
-
-if ans != -1:
-    a = A[0]
-    if a == 0:
-        ans = -1
-
-    for n in range(len(A)):
-        a = A[n]
-        ans += A[n] * (10 ** (len(A) - (n + 1)))
-
 
 print(ans)
