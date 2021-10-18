@@ -11,3 +11,5 @@ B_ans = ((B // C) + (B // D) - (B // lcmCD))
 A_ans = ((A_row // C) + (A_row // D) - (A_row // lcmCD))
 
 print((B - A + 1) - (B_ans - A_ans))
+
+# ◎
